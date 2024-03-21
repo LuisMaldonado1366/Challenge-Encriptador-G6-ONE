@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de texto</title>
+    <link rel="icon" type="image/x-icon" href="img/encrypt-icon.png">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logoAlura">
+        <img src="img/Logo.png" alt="logo alura" />
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="input">
+          <textarea
+            name="txtInput"
+            id="txtInput"
+            cols="50"
+            rows="30"
+            placeholder="Ingresa el texto aquí."
+            class="txtInput"
+          ></textarea>
+          <div>
+            <img src="img/info.svg" alt="info-symbol" />
+            <label class="infoBanner"
+              >Solo letras minúsculas y sin acentos.</label
+            >
+          </div>
+          <div class="buttons">
+            <button id="btnEncrypt" name="btnEncrypt" class="btnEncrypt">
+              Encriptar
+            </button>
+            <button id="btnDecrypt" name="btnDecrypt" class="btnDecrypt">
+              Desencriptar
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div id="modalAlert" class="modalAlert">
+        <div class="modalContent">
+          <span class="close">&times;</span>
+          <p id="modalMessage"></p>
+        </div>
+      </div>
+
+      <section>
+        <div class="output">
+          <textarea
+            name="txtOutput"
+            id="txtOutput"
+            cols="30"
+            rows="30"
+            placeholder="&#13;&#10;Ningun mensaje fue encontrado. &#13;&#10;Ingresa el texto que deseas procesar."
+            class="txtOutput"
+            disabled
+          ></textarea>
+          <button id="btnCopy" name="btnCopy" class="btnCopy" hidden>
+            Copiar
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script src="app.js"></script>
+</html>
